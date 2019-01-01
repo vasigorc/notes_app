@@ -1,5 +1,3 @@
-console.log('Starting notes.js...');
-
 //module is available in all of our files
 module.exports.age = 35;
 const fs = require('fs');
@@ -16,6 +14,8 @@ let addNote = (title, body) =>{
     if(duplicateNotes.length === 0){
         notes.push(note);
         fs.writeFileSync('notes-data.json', JSON.stringify(notes));
+        console.log("Node created");
+        log(note);
     }
 };
 
